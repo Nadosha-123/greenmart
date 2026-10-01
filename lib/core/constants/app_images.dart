@@ -1,6 +1,6 @@
 class AppImages {
   static const String logoSvg = 'assets/images/logo.svg';
-  static const String welcome = 'assets/images/welcome_bg.png';
+  static const String welcomePng = 'assets/images/welcome.png';
   static const String carrotSvg = 'assets/images/carrot.svg';
   static const String cartSvg = 'assets/icons/cart.svg';
   static const String exploreSvg = 'assets/icons/explore.svg';

@@ -14,11 +14,12 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            AppImages.welcome, 
-            fit: BoxFit.cover, 
-            width: double.infinity, 
-            height: double.infinity,
+          // خلفية صورة الشخص (PNG) تملأ الشاشة بالكامل وبشكل صحيح
+          Positioned.fill(
+            child: Image.asset(
+              AppImages.welcomePng, // (ملاحظة: غير اسم المتغير لاحقاً في الapp_images ليكون معبراً للصورة)
+              fit: BoxFit.cover,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 50),
@@ -32,8 +33,10 @@ class WelcomeScreen extends StatelessWidget {
                   textAlign: TextAlign.center, 
                   style: TextStyles.headline1.copyWith(color: AppColors.whiteColor),
                 ),
+                const SizedBox(height: 10),
                 Text(
                   'Get your groceries in as fast as one hour', 
+                  textAlign: TextAlign.center,
                   style: TextStyles.caption1.copyWith(color: AppColors.greyColor),
                 ),
                 const SizedBox(height: 40),
